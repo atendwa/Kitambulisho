@@ -1,24 +1,26 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "atendwa/kitambulisho",
+    "description": "This is my package kitambulisho",
     "keywords": [
-        ":vendor_name",
+        "atendwa",
         "laravel",
-        ":package_slug"
+        "kitambulisho"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/atendwa/kitambulisho",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "atendwa",
+            "email": "atendwa@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.4",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0||^12.0"
+        "php": "^8.2",
+        "atendwa/filakit": "^1.0",
+        "atendwa/support": "^1.0",
+        "illuminate/contracts": "^10.0||^11.0||^12.0",
+        "spatie/laravel-activitylog": "^4.10"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -35,14 +37,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Atendwa\\Kitambulisho\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Atendwa\\Kitambulisho\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -63,11 +63,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+                "Atendwa\\Kitambulisho\\Providers\\AuthenticationServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
