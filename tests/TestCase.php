@@ -2,8 +2,8 @@
 
 namespace Atendwa\Kitambulisho\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use Atendwa\Kitambulisho\KitambulishoServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
@@ -12,15 +12,15 @@ class TestCase extends Orchestra
         parent::setUp();
     }
 
+    public function getEnvironmentSetUp($app): void
+    {
+        config()->set('database.default', 'testing');
+    }
+
     protected function getPackageProviders($app): array
     {
         return [
             KitambulishoServiceProvider::class,
         ];
-    }
-
-    public function getEnvironmentSetUp($app): void
-    {
-        config()->set('database.default', 'testing');
     }
 }
