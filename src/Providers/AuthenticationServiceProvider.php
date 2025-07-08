@@ -20,6 +20,10 @@ class AuthenticationServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'authentication');
         $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
 
+        $this->publishes([
+            __DIR__ . '/../../config/authentication.php' => config_path('authentication.php'),
+        ], 'config');
+
         Event::subscribe(LoginListener::class);
 
         $this->app->singleton('authenticator.drivers', fn () => [
