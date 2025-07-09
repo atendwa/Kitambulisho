@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Atendwa\Kitambulisho\Services;
 
 use Atendwa\Kitambulisho\Contracts\Authenticator;
+use Atendwa\Kitambulisho\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Throwable;
 
