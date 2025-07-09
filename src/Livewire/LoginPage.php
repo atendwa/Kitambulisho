@@ -22,11 +22,11 @@ class LoginPage extends BaseLogin
 
     protected static string $view = 'authentication::pages.login';
 
+    private Authenticator $authenticator;
+
     private ?string $linkLabel = null;
 
     private ?string $resetLink = null;
-
-    private Authenticator $authenticator;
 
     /**
      * @throws Throwable
@@ -101,7 +101,7 @@ class LoginPage extends BaseLogin
 
     public function getHeading(): string
     {
-        return '';
+        return config('app.name');
     }
 
     /**
